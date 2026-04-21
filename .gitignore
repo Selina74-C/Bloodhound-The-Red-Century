@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+# Cursor / editor scratch
+.cursor/
+# Temporary reverse-engineering inputs (not meant to be versioned)
+reference/
+# ComfyUI runtime outputs, in case anyone runs the workflow inside the repo
+output/

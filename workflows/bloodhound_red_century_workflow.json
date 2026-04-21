@@ -1,0 +1,2587 @@
+{
+  "id": "952bce03-ee8e-4f7f-b74a-e58c7d1c5de4",
+  "revision": 0,
+  "last_node_id": 104,
+  "last_link_id": 41,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        -440,
+        80
+      ],
+      "size": [
+        260,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1,
+            11
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Ref image1 — Mustang establishing",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "image1.png",
+        "image"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        -440,
+        440
+      ],
+      "size": [
+        260,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2,
+            12
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Ref image2 — Mustang alt angle",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "image2.png",
+        "image"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        -440,
+        800
+      ],
+      "size": [
+        260,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3,
+            13
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Ref image3 — Desert ruins atmosphere",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "image3.jpeg",
+        "image"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        -440,
+        1160
+      ],
+      "size": [
+        260,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Ref image4 — In-car driver POV",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "image4.png",
+        "image"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [
+        -440,
+        1520
+      ],
+      "size": [
+        260,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            31
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Ref image5 — Raider Cadillac STS 2004",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "image5.png",
+        "image"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "LoadImage",
+      "pos": [
+        -440,
+        1880
+      ],
+      "size": [
+        260,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            38
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Ref image6 — Blood-vined Buick Century",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "image6.png",
+        "image"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "MarkdownNote",
+      "pos": [
+        -1160,
+        80
+      ],
+      "size": [
+        700,
+        720
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Setup — read first",
+      "properties": {},
+      "widgets_values": [
+        "# Bloodhound: The Red Century — ComfyUI workflow\n\nReverse-engineered 10-shot pipeline: **Nano Banana 2 (keyframe T2I)** → **Veo 3.1 (8-second I2V)** → `SaveVideo`, mirroring the short-cut edit strategy described in the reverse-engineering notes.\n\n## Setup\n1. Update ComfyUI to a build that ships the **Nano Banana 2** and **Veo 3 / 3.1** partner nodes, and sign in (or use an API Key) so the API nodes can run. See https://docs.comfy.org/tutorials/partner-nodes/overview\n2. Copy the six reference images from `assets/reference_images/` (`image1.png`, `image2.png`, `image3.jpeg`, `image4.png`, `image5.png`, `image6.png`) into your `ComfyUI/input/` folder.\n3. If the Veo model dropdown in your build does not list `veo-3.1-generate-preview`, reselect the nearest Veo 3.1 model (e.g. `veo-3.1-fast-generate-preview`). The 3.0 fast model also works as a fallback.\n\n## Flow per shot\n`LoadImage(s)` → `BatchImagesNode` (multi-ref only) → `GeminiNanoBanana2` → `SaveImage` (keyframe archive) + → `Veo3VideoGenerationNode` → `SaveVideo video/Bloodhound_SXX`\n\n## Render & edit\nRunning the whole graph produces 10 individual 8s clips into `output/video/`. Cut them together in Premiere/Resolve in the order S01 → S10 with tight, handheld-cut pacing (3–5s visible) and overlay engine / gunfire / ambient red-factory SFX for the final film."
+      ],
+      "color": "#432",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 10,
+      "type": "BatchImagesNode",
+      "pos": [
+        60,
+        80
+      ],
+      "size": [
+        225,
+        120
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image0",
+          "name": "images.image0",
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "label": "image3",
+          "name": "images.image3",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchImagesNode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 11,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        320,
+        80
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 4
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5,
+            6
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S01 Wide desert · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Extreme wide-angle long shot across a ruined Californian desert town stretching to the horizon, scattered rusted car wrecks on a cracked asphalt highway. Far in the distance a battered black 2015 Ford Mustang speeds away, kicking up a long plume of dust backlit by the bright sun. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        101001,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 12,
+      "type": "SaveImage",
+      "pos": [
+        750,
+        80
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S01_wide_desert",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S01_wide_desert"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        320,
+        520
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "title": "S01 Wide desert · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Extreme wide-angle long shot across a ruined Californian desert town stretching to the horizon, scattered rusted car wrecks on a cracked asphalt highway. Far in the distance a battered black 2015 Ford Mustang speeds away, kicking up a long plume of dust backlit by the bright sun. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        101002,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 14,
+      "type": "SaveVideo",
+      "pos": [
+        810,
+        520
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 7
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S01_wide_desert",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S01_wide_desert",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        1040,
+        80
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            8,
+            9
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S02 Crow on skull · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Locked-off close-up on the rusted silver hood of a wrecked 2000 Buick Regal. A black crow perches on a human skull resting on the hood, pecking at it. In the blurred background a battered 2015 Ford Mustang roars past, kicking up a wall of dust; the crow startles and takes off. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        202002,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 22,
+      "type": "SaveImage",
+      "pos": [
+        1470,
+        80
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S02_crow_on_skull",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S02_crow_on_skull"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        1040,
+        520
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "title": "S02 Crow on skull · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Locked-off close-up on the rusted silver hood of a wrecked 2000 Buick Regal. A black crow perches on a human skull resting on the hood, pecking at it. In the blurred background a battered 2015 Ford Mustang roars past, kicking up a wall of dust; the crow startles and takes off. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        202003,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 24,
+      "type": "SaveVideo",
+      "pos": [
+        1530,
+        520
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 10
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S02_crow_on_skull",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S02_crow_on_skull",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "BatchImagesNode",
+      "pos": [
+        2020,
+        80
+      ],
+      "size": [
+        225,
+        120
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image0",
+          "name": "images.image0",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "type": "IMAGE",
+          "link": 12
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "type": "IMAGE",
+          "link": 13
+        },
+        {
+          "label": "image3",
+          "name": "images.image3",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchImagesNode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 31,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        2280,
+        80
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            15,
+            16
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S03 Crane pullback · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Slow rising wide-angle crane shot over a ruined Californian desert town, the cracked highway littered with rusted car wrecks. Far in the distance a battered black 2015 Ford Mustang speeds along the road, kicking up a long trail of dust. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        303003,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 32,
+      "type": "SaveImage",
+      "pos": [
+        2710,
+        80
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 15
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S03_crane_pullback",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S03_crane_pullback"
+      ]
+    },
+    {
+      "id": 33,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        2280,
+        520
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "title": "S03 Crane pullback · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Slow rising wide-angle crane shot over a ruined Californian desert town, the cracked highway littered with rusted car wrecks. Far in the distance a battered black 2015 Ford Mustang speeds along the road, kicking up a long trail of dust. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        303004,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 34,
+      "type": "SaveVideo",
+      "pos": [
+        2770,
+        520
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 17
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S03_crane_pullback",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S03_crane_pullback",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 41,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        60,
+        1200
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19,
+            20
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S04 Driver gear-shift · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Tight close-up inside a battered black 2015 Ford Mustang driving through the Californian desert. A gloved hand shifts the gear lever and a boot stomps the accelerator; the tachometer needle jumps. Heat haze visible through the windshield. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        404004,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 42,
+      "type": "SaveImage",
+      "pos": [
+        490,
+        1200
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S04_driver_gearshift",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S04_driver_gearshift"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        60,
+        1640
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "title": "S04 Driver gear-shift · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Tight close-up inside a battered black 2015 Ford Mustang driving through the Californian desert. A gloved hand shifts the gear lever and a boot stomps the accelerator; the tachometer needle jumps. Heat haze visible through the windshield. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        404005,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 44,
+      "type": "SaveVideo",
+      "pos": [
+        550,
+        1640
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 21
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S04_driver_gearshift",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S04_driver_gearshift",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 51,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        1040,
+        1200
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22,
+            23
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S05 Raider binoculars · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Close-up of a rugged post-apocalyptic raider, goggles and weathered face, sitting atop a heavily modified spike-armored Cadillac STS in a ruined Californian desert town. He lifts battered binoculars and peers toward the horizon; cut to his POV through the binoculars, a tiny dust plume far away revealing the fleeing 2015 Ford Mustang; cut back as he grins and shouts over his shoulder at his gang. 90s cinematic film style, Mad Max post-apocalyptic aesthetic, heavy film grain, handheld camera shake, photorealistic.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        505005,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 52,
+      "type": "SaveImage",
+      "pos": [
+        1470,
+        1200
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S05_raider_binoculars",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S05_raider_binoculars"
+      ]
+    },
+    {
+      "id": 53,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        1040,
+        1640
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "title": "S05 Raider binoculars · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Close-up of a rugged post-apocalyptic raider, goggles and weathered face, sitting atop a heavily modified spike-armored Cadillac STS in a ruined Californian desert town. He lifts battered binoculars and peers toward the horizon; cut to his POV through the binoculars, a tiny dust plume far away revealing the fleeing 2015 Ford Mustang; cut back as he grins and shouts over his shoulder at his gang. 90s cinematic film style, Mad Max post-apocalyptic aesthetic, heavy film grain, handheld camera shake, photorealistic.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        505006,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 54,
+      "type": "SaveVideo",
+      "pos": [
+        1530,
+        1640
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 24
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S05_raider_binoculars",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S05_raider_binoculars",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 61,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        2020,
+        1200
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            25,
+            26
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S06 Gang loads guns · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Close-up montage of post-apocalyptic raiders inside their modified Mad-Max-style vehicles in the ruined Californian desert. Calloused hands rack the slide on a battered handgun, another raider loads a shell into a sawed-off shotgun, a third hammers a loose panel on the hood with force. Engines cough and rev. 90s cinematic film style, Mad Max post-apocalyptic aesthetic, heavy film grain, handheld camera shake, photorealistic.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        606006,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 62,
+      "type": "SaveImage",
+      "pos": [
+        2450,
+        1200
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S06_gang_loads_guns",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S06_gang_loads_guns"
+      ]
+    },
+    {
+      "id": 63,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        2020,
+        1640
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "title": "S06 Gang loads guns · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Close-up montage of post-apocalyptic raiders inside their modified Mad-Max-style vehicles in the ruined Californian desert. Calloused hands rack the slide on a battered handgun, another raider loads a shell into a sawed-off shotgun, a third hammers a loose panel on the hood with force. Engines cough and rev. 90s cinematic film style, Mad Max post-apocalyptic aesthetic, heavy film grain, handheld camera shake, photorealistic.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        606007,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 64,
+      "type": "SaveVideo",
+      "pos": [
+        2510,
+        1640
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 27
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S06_gang_loads_guns",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S06_gang_loads_guns",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 71,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        60,
+        2320
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28,
+            29
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S07 Rear-view mirror · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Tight close-up on the cracked rear-view mirror of the battered black 2015 Ford Mustang. Reflected in the mirror, a fleet of spike-armored raider vehicles (modified Cadillac STS, Chrysler PT Cruiser, Dodge Diplomat) surges into view through rolling dust, growing larger fast. 90s cinematic film style, tense action-film editing, heavy film grain, handheld camera shake, photorealistic car chase sequence.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        707007,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 72,
+      "type": "SaveImage",
+      "pos": [
+        490,
+        2320
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S07_rearview_mirror",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S07_rearview_mirror"
+      ]
+    },
+    {
+      "id": 73,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        60,
+        2760
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "title": "S07 Rear-view mirror · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Tight close-up on the cracked rear-view mirror of the battered black 2015 Ford Mustang. Reflected in the mirror, a fleet of spike-armored raider vehicles (modified Cadillac STS, Chrysler PT Cruiser, Dodge Diplomat) surges into view through rolling dust, growing larger fast. 90s cinematic film style, tense action-film editing, heavy film grain, handheld camera shake, photorealistic car chase sequence.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        707008,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 74,
+      "type": "SaveVideo",
+      "pos": [
+        550,
+        2760
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 30
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S07_rearview_mirror",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S07_rearview_mirror",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 81,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        1040,
+        2320
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 31
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            32,
+            33
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S08 Cadillac T-bone · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Wide tracking shot across a wreck-strewn Californian desert highway. The battered black 2015 Ford Mustang is flanked by spike-armored raider cars; suddenly a menacing raider-modified 2004 Cadillac STS (matching the reference image's bodywork and spiked bull-bar) swerves in from the side and T-bones the Mustang with a sickening crunch, sheet metal deforming, sparks flying. The Mustang veers off the road. 90s cinematic film style, tense action-film editing, heavy film grain, handheld camera shake, photorealistic car chase sequence.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        808008,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 82,
+      "type": "SaveImage",
+      "pos": [
+        1470,
+        2320
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 32
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S08_cadillac_tbone",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S08_cadillac_tbone"
+      ]
+    },
+    {
+      "id": 83,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        1040,
+        2760
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "title": "S08 Cadillac T-bone · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Wide tracking shot across a wreck-strewn Californian desert highway. The battered black 2015 Ford Mustang is flanked by spike-armored raider cars; suddenly a menacing raider-modified 2004 Cadillac STS (matching the reference image's bodywork and spiked bull-bar) swerves in from the side and T-bones the Mustang with a sickening crunch, sheet metal deforming, sparks flying. The Mustang veers off the road. 90s cinematic film style, tense action-film editing, heavy film grain, handheld camera shake, photorealistic car chase sequence.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        808009,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 84,
+      "type": "SaveVideo",
+      "pos": [
+        1530,
+        2760
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 34
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S08_cadillac_tbone",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S08_cadillac_tbone",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 91,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        2020,
+        2320
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            35,
+            36
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S09 Mustang rollover · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Mid shot, cinematic slow motion. The battered black 2015 Ford Mustang catches a hidden cable across the desert highway, its front end kicks upward and the car is launched into the air, barrel-rolling multiple times. Debris, dust, shattered glass and torn sheet metal scatter in every direction against the setting sun. 90s cinematic film style, tense action-film editing, heavy film grain, handheld camera shake, photorealistic car chase sequence.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        909009,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 92,
+      "type": "SaveImage",
+      "pos": [
+        2450,
+        2320
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 35
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S09_mustang_rollover",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S09_mustang_rollover"
+      ]
+    },
+    {
+      "id": 93,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        2020,
+        2760
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "title": "S09 Mustang rollover · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Mid shot, cinematic slow motion. The battered black 2015 Ford Mustang catches a hidden cable across the desert highway, its front end kicks upward and the car is launched into the air, barrel-rolling multiple times. Debris, dust, shattered glass and torn sheet metal scatter in every direction against the setting sun. 90s cinematic film style, tense action-film editing, heavy film grain, handheld camera shake, photorealistic car chase sequence.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        909010,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 94,
+      "type": "SaveVideo",
+      "pos": [
+        2510,
+        2760
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 37
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S09_mustang_rollover",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S09_mustang_rollover",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 101,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        60,
+        3440
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 38
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            39,
+            40
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "S10 Biopunk finale · keyframe (Nano Banana 2)",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Wide sunset shot inside an abandoned factory in the ruined Californian desert. A wounded, exhausted female protagonist limps forward using a wooden stick as a cane, silhouetted against an eerie red glow. At the center of the factory sits a dark red Buick Century, its body wrapped in pulsating blood-colored alien vines; the headlights and cabin pulse with a faint, breathing red light. Biopunk, surreal, dread-soaked. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        110010,
+        "randomize",
+        "16:9",
+        "2K",
+        "IMAGE",
+        "HIGH",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 102,
+      "type": "SaveImage",
+      "pos": [
+        490,
+        3440
+      ],
+      "size": [
+        240,
+        270
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 39
+        }
+      ],
+      "outputs": [],
+      "title": "Keyframe keyframes/Bloodhound_S10_biopunk_finale",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "keyframes/Bloodhound_S10_biopunk_finale"
+      ]
+    },
+    {
+      "id": 103,
+      "type": "Veo3VideoGenerationNode",
+      "pos": [
+        60,
+        3880
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            41
+          ]
+        }
+      ],
+      "title": "S10 Biopunk finale · video (Veo 3.1)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "Veo3VideoGenerationNode"
+      },
+      "widgets_values": [
+        "Wide sunset shot inside an abandoned factory in the ruined Californian desert. A wounded, exhausted female protagonist limps forward using a wooden stick as a cane, silhouetted against an eerie red glow. At the center of the factory sits a dark red Buick Century, its body wrapped in pulsating blood-colored alien vines; the headlights and cabin pulse with a faint, breathing red light. Biopunk, surreal, dread-soaked. 90s cinematic film style, heavy film grain, handheld camera shake, photorealistic.",
+        "16:9",
+        "",
+        8,
+        true,
+        "ALLOW",
+        110011,
+        "randomize",
+        "veo-3.1-generate-preview",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 104,
+      "type": "SaveVideo",
+      "pos": [
+        550,
+        3880
+      ],
+      "size": [
+        520,
+        500
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 41
+        }
+      ],
+      "outputs": [],
+      "title": "SaveVideo video/Bloodhound_S10_biopunk_finale",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Bloodhound_S10_biopunk_finale",
+        "auto",
+        "auto"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      10,
+      1,
+      "IMAGE"
+    ],
+    [
+      3,
+      3,
+      0,
+      10,
+      2,
+      "IMAGE"
+    ],
+    [
+      4,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      11,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      13,
+      0,
+      14,
+      0,
+      "VIDEO"
+    ],
+    [
+      8,
+      21,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      21,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      23,
+      0,
+      24,
+      0,
+      "VIDEO"
+    ],
+    [
+      11,
+      1,
+      0,
+      30,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      2,
+      0,
+      30,
+      1,
+      "IMAGE"
+    ],
+    [
+      13,
+      3,
+      0,
+      30,
+      2,
+      "IMAGE"
+    ],
+    [
+      14,
+      30,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      31,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      31,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      33,
+      0,
+      34,
+      0,
+      "VIDEO"
+    ],
+    [
+      18,
+      4,
+      0,
+      41,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      41,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      41,
+      0,
+      43,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      43,
+      0,
+      44,
+      0,
+      "VIDEO"
+    ],
+    [
+      22,
+      51,
+      0,
+      52,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      51,
+      0,
+      53,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      53,
+      0,
+      54,
+      0,
+      "VIDEO"
+    ],
+    [
+      25,
+      61,
+      0,
+      62,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      61,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      63,
+      0,
+      64,
+      0,
+      "VIDEO"
+    ],
+    [
+      28,
+      71,
+      0,
+      72,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      71,
+      0,
+      73,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      73,
+      0,
+      74,
+      0,
+      "VIDEO"
+    ],
+    [
+      31,
+      5,
+      0,
+      81,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      81,
+      0,
+      82,
+      0,
+      "IMAGE"
+    ],
+    [
+      33,
+      81,
+      0,
+      83,
+      0,
+      "IMAGE"
+    ],
+    [
+      34,
+      83,
+      0,
+      84,
+      0,
+      "VIDEO"
+    ],
+    [
+      35,
+      91,
+      0,
+      92,
+      0,
+      "IMAGE"
+    ],
+    [
+      36,
+      91,
+      0,
+      93,
+      0,
+      "IMAGE"
+    ],
+    [
+      37,
+      93,
+      0,
+      94,
+      0,
+      "VIDEO"
+    ],
+    [
+      38,
+      6,
+      0,
+      101,
+      0,
+      "IMAGE"
+    ],
+    [
+      39,
+      101,
+      0,
+      102,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      101,
+      0,
+      103,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      103,
+      0,
+      104,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Act I — Establishing (refs image1/2/3)",
+      "bounding": [
+        40,
+        40,
+        3960,
+        1060
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Act II — Pursuit & Crash (refs image4, image5)",
+      "bounding": [
+        40,
+        1160,
+        3960,
+        2180
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Act III — Biopunk Finale (ref image6)",
+      "bounding": [
+        40,
+        3400,
+        1960,
+        1060
+      ],
+      "color": "#8a4f7a",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.45,
+      "offset": [
+        600,
+        40
+      ]
+    },
+    "frontendVersion": "1.44.2",
+    "workflowRendererVersion": "Vue-corrected"
+  },
+  "version": 0.4
+}

@@ -65,8 +65,8 @@ The `LoadImage` nodes in the workflow reference exactly these filenames:
 
 ### 3. Load and run the workflow
 
-1. In ComfyUI, use **Workflow → Open** and select `workflows/bloodhound_red_century_workflow.json`.
-2. Read the red **“Setup — read first”** note in the top-left corner of the canvas.
+1. In ComfyUI, use Workflow → Open** and select `workflows/bloodhound_red_century_workflow.json`.
+2. Read the red “Setup — read first”** note in the top-left corner of the canvas.
 3. Queue the graph. The Nano Banana 2 nodes will render 10 keyframe stills; the Veo 3.1 nodes will then render ten 8-second clips with audio.
 4. If your ComfyUI build does not list the exact model id `veo-3.1-generate-preview`, reselect the nearest Veo 3.1 entry on each of the 10 Veo nodes (e.g. `veo-3.1-fast-generate-preview`); `veo-3.0-fast-generate-001` works as a fallback.
 
@@ -75,7 +75,7 @@ The `LoadImage` nodes in the workflow reference exactly these filenames:
 - `ComfyUI/output/keyframes/Bloodhound_S01_wide_desert…*.png` — 10 archived keyframes
 - `ComfyUI/output/video/Bloodhound_S01_wide_desert.mp4` … `Bloodhound_S10_biopunk_finale.mp4` — 10 individual 8-second clips
 
-### 5. Final cut
+### 5. Final Cut
 
 Import all 10 clips into a Premiere / Resolve sequence in `S01 → S10` order. The source film relies on short-cut pacing (3–5 seconds per shot), handheld-style cuts, overlaid engine roars / gunfire / ambient red-factory SFX, and the Mad-Max-flavored color grade. The companion project file `Gio AIGC.prproj` mirrors this edit structure.
 
